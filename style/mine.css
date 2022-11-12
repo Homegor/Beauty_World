@@ -3,7 +3,7 @@ header, main, footer {
     width: 100%;
 }
 header{
-    background-image: url("media/background.png");
+    background-image: url("../media/background.png");
     height: 591px;
 }
 section{
@@ -27,10 +27,6 @@ ul{
 }
 label{
     display: block;
-}
-.wrapper {
-    display: flex;
-    flex-direction: column;
 }
 .wrapper .main {
     flex: 1;
@@ -561,7 +557,6 @@ label{
     .hero__media{display: none;}
     .hero, .name{justify-content: space-around;}
     .masters__container{margin: 0 30px 10px 0}
-    .wrapper{display: flex; justify-content: center}
     .services__box-1, .services__box-2{flex-wrap: wrap; justify-content: center;}
     .masters__info{justify-content: center;}
     .masters__subtitle{text-align: center;}
