@@ -1,19 +1,20 @@
 {
-  "name": "portfolio",
+  "name": "beauty_world",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fllipper/Portfolio.git"
+    "url": "git+https://github.com/fllipper/Beauty_World.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/fllipper/Portfolio/issues"
+    "url": "https://github.com/fllipper/Beauty_World/issues"
   },
-  "homepage": "https://github.com/fllipper/Portfolio#readme"
+  "homepage": "https://github.com/fllipper/Beauty_World#readme"
 }
