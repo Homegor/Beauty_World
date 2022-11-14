@@ -1,0 +1,72 @@
+
+/* Large Devices, Wide Screens */
+@media screen and (max-width: 1440px){
+  .gallery__gallery{justify-content: flex-start;flex-wrap: nowrap; overflow: scroll;}
+}
+@media screen and (max-width: 1110px){
+  .hero__media{display: none;}
+  .hero, .name{justify-content: space-around;}
+  .masters__container{margin: 0 30px 10px 0}
+  .services__box-1, .services__box-2{flex-wrap: wrap; justify-content: center;}
+  .masters__info{justify-content: center;}
+  .masters__subtitle{text-align: center;}
+  .gallery__container{justify-content: center}
+  .title{text-align: center;}
+  .btn__slider{display: none;}
+}
+/* Medium Devices, Desktops */
+@media screen and (max-width: 992px) {
+  .brands__icon{justify-content: flex-start;flex-wrap: nowrap; overflow: scroll;}
+  .about__information{justify-content: center;}
+  .video__blackout{margin-top: 15px;}
+  .name{justify-content: center; margin-right: 0}
+}
+/* Small Devices, Tablets */
+@media screen and (max-width: 810px){
+  .tabs{overflow: scroll; white-space: nowrap;}
+  /*    .masters__container:not(:last-child){margin: 0 10px 0 0}*/
+}
+@media screen and (max-width: 770px) {
+  .benefit__icon:not(:last-child), .info-1:not(:last-child), .info-2:not(:last-child){margin-right: 0}
+  .benefit__icon:not(:first-child){margin: 15px 0 0 0}
+  .benefit{flex-direction: column; align-items: center}
+  .contact__left-right{justify-content: center;}
+  .contact__right{margin-top: 15px;}
+  .services__box-1,.services__box-2{align-items: center;justify-content: center; flex-direction: column;}
+  .info-2:not(:last-child){padding-bottom: 48px;}
+  .masters__info{flex-wrap: wrap; flex-direction: column; align-content: center;}
+  .masters__name{text-align: center;}
+  .reference{text-align: center;}
+  .reference__social-all{justify-content: center;}
+}
+@media screen and (max-width: 640px) {
+  .footer__block{flex-direction: column-reverse;}
+  .footer__information{margin-top: 8px; display: flex; flex-direction: row; align-items: center;}
+  .footer__politic{margin-top: 0}
+  .footer__title{margin-right: 10px}
+
+}
+/* Extra Small Devices, Phones */
+@media screen and (max-width: 580px) {
+  /* На 580 сделать hamburger */
+  .hero__content, .hero__social{margin: 0;padding-top: 20px;}
+  .hero__subtitle{text-align: center;}
+  .hero__btn{display: flex;}
+  .hero__social{margin: 0;align-items: center;}
+  .hero__social ul{display: flex;}
+  .hero__social li:not(:last-child){margin-right:18px;}
+  .navigation-top{order: 0;}
+  .logo{order: 1;}
+  .information{order: 2;}
+  .benefit{padding-top: 0;}
+  .masters__container{display: flex; align-items: center;}
+  .masters__container:not(:last-child){margin-right: 0}
+  .masters__name{text-align: left; margin-left: 8px;}
+}
+@media screen and (max-width: 520px) {
+  .hero__title{text-align: center}
+  .name{justify-content: center; margin-right: 0;}
+}
+/* Custom, iPhone Retina */
+@media screen and (max-width: 320px) {
+}

@@ -1,0 +1,29 @@
+header, main, footer {
+  max-width: 100%;
+  width: 100%;
+}
+header{
+  background-image: url("../src/media/background.png");
+}
+section{
+  padding: 50px 0;
+}
+body{
+  min-width: 320px;
+  margin: auto;
+}
+a, p, h1, h2, h3, h4, button, input{
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  color: #333333;
+  margin: auto;
+  padding: 0;
+}
+ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+label{
+  display: block;
+}
