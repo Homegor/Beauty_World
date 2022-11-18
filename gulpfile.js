@@ -33,6 +33,7 @@ function serve(){
     watch('src/style/**.scss', series(scss)).on('change', sync.reload)
 }
 
+
 //todo Добавить del 7.0 версию
 
 exports.build = series(clear, html, scss, media, serve);
