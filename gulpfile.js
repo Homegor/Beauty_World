@@ -1,9 +1,8 @@
-const {src, dest, series} = require('gulp');
+const {src, dest, series, watch} = require('gulp');
 const gulp = require("gulp");
 const sass = require('gulp-sass')(require('sass'));
 const del = require('del')
-const sync = require('browser-sync')
-const {watch} = require("browser-sync");
+const sync = require('browser-sync').create();
 
 //Работа с SCSS
 function scss() {
