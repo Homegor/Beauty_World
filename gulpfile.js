@@ -8,8 +8,8 @@ const sync = require('browser-sync').create();
 function scss() {
     return src('src/style/**/*.scss')
         .pipe(sass.sync().on('error', sass.logError))
-        .pipe(gulp.dest('dist/css'))
-        .pipe(gulp.dest('src/style/css'));
+        .pipe(gulp.dest('dist/css/'))
+        .pipe(gulp.dest('src/css/'));
 }
 //Работа с HTML
 function html(){
@@ -32,5 +32,7 @@ function serve(){
     watch('src/**.html', series(html)).on('change', sync.reload)
     watch('src/style/**.scss', series(scss)).on('change', sync.reload)
 }
+
+//todo Добавить del 7.0 версию
 
 exports.build = series(clear, html, scss, media, serve);
