@@ -34,4 +34,4 @@ function serve(){
     watch('src/style/**.scss', series(scss)).on('change', sync.reload)
 }
 
-exports.serve = series(clear, html, scss, media, serve);
+exports.build = series(clear, html, scss, media, serve);
