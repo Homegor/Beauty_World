@@ -1,3 +1,5 @@
+@import "vars";
+
 header, main, footer {
   max-width: 100%;
   width: 100%;
@@ -15,7 +17,7 @@ body{
 a, p, h1, h2, h3, h4, button, input{
   font-family: 'Montserrat', sans-serif;
   text-decoration: none;
-  color: #333333;
+  color: $grey;
   margin: auto;
   padding: 0;
 }
