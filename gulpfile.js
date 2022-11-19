@@ -23,9 +23,14 @@ function media(){
         .pipe(dest('dist/media'))
         .pipe(gulp.dest('src/media'));
 }
+
+//Удаляет файлы из dist
 function clear(){
     return del('dist');
 }
+//todo: Обновить del до 7.0 версии
+
+//Режим просмотра
 function serve(){
     sync.init({
         server: './dist'
@@ -34,7 +39,5 @@ function serve(){
     watch('src/style/**.scss', series(scss)).on('change', sync.reload)
 }
 
-
-//todo Добавить del 7.0 версию
 
 exports.build = series(clear, html, scss, media, serve);
