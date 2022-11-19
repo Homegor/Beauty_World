@@ -4,6 +4,7 @@ const sass = require('gulp-sass')(require('sass'));
 const del = require('del')
 const sync = require('browser-sync').create();
 
+
 //Работа с SCSS
 function scss() {
     return src('src/style/**/*.scss')
