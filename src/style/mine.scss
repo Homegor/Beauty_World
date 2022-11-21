@@ -2,25 +2,7 @@
 @import "vars";
 @import "vars";
 
-.navbar input[type="checkbox"],
-.navbar .hamburger-lines {
-    display: none;
-}
-.wrapper .main {
-    flex: 1;
-}
-.header,
-.footer {
-    flex-shrink: 0;
-}
-.mw{
-    max-width: 1110px;
-    margin: auto;
-}
-.left-right{
-    max-width: 1015px;
-    margin: auto;
-}
+
 .btn{
     background: $orange;
     border-radius: 24px ;
@@ -28,12 +10,12 @@
     text-align: center;
     color: $white;
     font-weight: $fw-500;
-}
-.btn:hover{
-    transition: .5s background-color;
-    background: darken($orange, 5%);
-    cursor: pointer;
-    color: $white;
+    &:hover{
+        transition: .5s background-color;
+        background: darken($orange, 5%);
+        cursor: pointer;
+        color: $white;
+    }
 }
 :not(.btn-check)+.btn:active{
     color: $white;
@@ -58,10 +40,10 @@
     opacity: 0;
     transition: all 0.4s ease-in-out;
     text-align: center;
-}
-.link:hover{
-    opacity: 0.8;
-    color: $white;
+    &:hover{
+        opacity: 0.8;
+        color: $white;
+    }
 }
 .menu{
     display: flex;
@@ -71,64 +53,16 @@
 }
 .logo{
     margin-top: 30px;
+    & a{
+        font-style: normal;
+        font-weight: $fw-700;
+        font-size: $fs-24;
+    }
+    & a:hover{
+        color: #333333;
+    }
 }
-.logo a{
-    font-style: normal;
-    font-weight: $fw-700;
-    font-size: $fs-24;
-}
-.logo a:hover{
-    color: #333333;
-}
-.navigation, .tabs__navigation{
-    font-style: normal;
-    font-weight: 500;
-    font-size: $fs-14;
-}
-.navigation ul li, .tabs__navigation ul li, .brands ul li{
-    display: inline;
-}
-.navigation li:not(:last-child), .tabs__active li:not(:last-child){
-    margin-right: 28px;
-}
-.navigation a:hover, .tabs__active a:hover{
-    color: $green;
-    transition: .5s;
-}
-.services__info, .benefit__icon{
-    width: 350px;
-    height: auto;
-}
-.price__title{
-    font-weight: $fw-700;
-    font-size: $fs-48;
-}
-.btn__next, .btn__prev{
-    background-color: $white;
-    color: $green;
-    font-size: $fs-25;
-    height: 40px;
-    width: 40px;
-    border-width: 0;
-    border-radius: 50px;
-    cursor: pointer;
-}
-.btn__next:hover, .btn__prev:hover{
-    transition: all 0.5s ease-in-out;
-    background: darken($white, 8%);
-}
-.reference__email, .form__politic-text, .footer__politic-text{
-    text-decoration: underline;
-}
-.mail-to, .form__politic-text, .footer__politic-text{
-    color: $blue;
-}
-.benefit__icon:not(:last-child), .info-1:not(:last-child), .info-2:not(:last-child){
-    margin-right: 30px;
-}
-.info-1{
-    padding-bottom: 48px;
-}
+
 .navigation{
     margin-top: 36px;
     &__active{
