@@ -38,7 +38,7 @@ function media(){
 
 //Удаляет файлы из dist
 function clear(){
-    return del('dist');
+    return del(['dist','src/css/']);
 }
 
 //Режим просмотра
@@ -50,4 +50,5 @@ function serve(){
     watch('src/style/!**.scss', series(scss)).on('change', sync.reload)
 }
 
+exports.clear = clear;
 exports.build = series(clear, html, scss, media, serve);
