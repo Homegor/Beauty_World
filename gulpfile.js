@@ -2,22 +2,32 @@ const {src, dest, series, watch} = require('gulp');
 const gulp = require("gulp");
 const sass = require('gulp-sass')(require('sass'));
 const csso = require('gulp-csso');
-const include = require('gulp-file-include');
 const htmlMin = require('gulp-htmlmin');
 const del = require('del');
+const autoprefixer = require('gulp-autoprefixer')
+const concat = require('gulp-concat')
+const sourcemaps = require('gulp-sourcemaps')
 const sync = require('browser-sync').create();
-
 
 //Работа с SCSS
 function scss() {
     return src('src/style/**/*.scss')
         .pipe(sass.sync().on('error', sass.logError))
-        .pipe(gulp.dest('dist/css/'))
-        .pipe(gulp.dest('src/css/'));
+        .pipe(sourcemaps.init({loadMaps: true}))
+        .pipe(autoprefixer({
+            overrideBrowserslist: ['last 2 versions']
+        }))
+/*        .pipe(csso())
+        .pipe(concat('mine.css'))*/
+        .pipe(sourcemaps.write('.', {addComment: true}))
+        .pipe(gulp.dest('dist/css/'));
 }
 //Работа с HTML
 function html(){
     return src('src/**/*.html')
+        .pipe(htmlMin({
+            collapseWhitespace: true
+        }))
         .pipe(dest('dist'));
 }
 //Работа с media
