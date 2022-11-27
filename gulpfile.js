@@ -12,14 +12,13 @@ const sync = require('browser-sync').create();
 //Работа с SCSS
 function scss() {
     return src('src/style/**/*.scss')
+        .pipe(sourcemaps.init({largeFile: true}))
         .pipe(sass.sync().on('error', sass.logError))
-        .pipe(sourcemaps.init({loadMaps: true}))
-        .pipe(autoprefixer({
-            overrideBrowserslist: ['last 2 versions']
-        }))
+        .pipe(autoprefixer({overrideBrowserslist: ['last 10 versions'],cascade: false}))
         .pipe(csso())
         .pipe(concat('mine.css'))
-        .pipe(sourcemaps.write('.', {addComment: true}))
+        .pipe(sourcemaps.write('', {includeContent: false}))
+        .pipe(gulp.dest('src/css/'))
         .pipe(gulp.dest('dist/css/'));
 }
 //Работа с HTML
@@ -41,7 +40,6 @@ function media(){
 function clear(){
     return del('dist');
 }
-//todo: Обновить del до 7.0 версии
 
 //Режим просмотра
 function serve(){
@@ -49,8 +47,7 @@ function serve(){
         server: './dist'
     })
     watch('src/**.html', series(html)).on('change', sync.reload)
-    watch('src/style/**.scss', series(scss)).on('change', sync.reload)
+    watch('src/style/!**.scss', series(scss)).on('change', sync.reload)
 }
-
 
 exports.build = series(clear, html, scss, media, serve);
