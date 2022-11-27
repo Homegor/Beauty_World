@@ -17,8 +17,8 @@ function scss() {
         .pipe(autoprefixer({
             overrideBrowserslist: ['last 2 versions']
         }))
-/*        .pipe(csso())
-        .pipe(concat('mine.css'))*/
+        .pipe(csso())
+        .pipe(concat('mine.css'))
         .pipe(sourcemaps.write('.', {addComment: true}))
         .pipe(gulp.dest('dist/css/'));
 }
