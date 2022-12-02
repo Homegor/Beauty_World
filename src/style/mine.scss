@@ -1,6 +1,6 @@
 @import "global";
 @import "vars";
-@import "vars";
+@import "media";
 
 .btn{
     background: $orange;
@@ -20,9 +20,6 @@
     color: $white;
     background-color: lighten($orange, 10%);
     border-color: lighten($orange, 10%);
-}
-.full{
-    background-color: $bs;
 }
 .link{
     position: absolute;
