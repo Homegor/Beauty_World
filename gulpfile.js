@@ -47,7 +47,7 @@ function serve(){
         server: './dist'
     })
     watch('src/**.html', series(html)).on('change', sync.reload)
-    watch('src/style/!**.scss', series(scss)).on('change', sync.reload)
+    watch('src/style/**.scss', series(scss)).on('change', sync.reload)
 }
 
 exports.clear = clear;
