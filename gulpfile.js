@@ -41,16 +41,20 @@ function clear(){
     return del(['dist','src/css/']);
 }
 
-//Режим просмотра
-function serve(){
+//Режим дев-сервер
+function devServe(){
     sync.init({
         server: './dist',
         notify: false
     })
+}
+
+//Режим просмотра
+function serve(){
     watch('src/**.html', series(html)).on('change', sync.reload)
     watch('src/style/**.scss', series(scss)).on('change', sync.reload)
 }
 
 exports.clear = clear;
-exports.build = series(html, scss, media, serve);
-exports.default = parallel(clear, html, scss, media, serve);
+exports.build = series(clear, html, scss, media);
+exports.default = series(scss, parallel(devServe,serve));
