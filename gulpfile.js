@@ -1,4 +1,4 @@
-const {src, dest, series, watch} = require('gulp');
+const {src, dest, series, watch, parallel} = require('gulp');
 const gulp = require("gulp");
 const sass = require('gulp-sass')(require('sass'));
 const csso = require('gulp-csso');
@@ -52,3 +52,4 @@ function serve(){
 
 exports.clear = clear;
 exports.build = series(clear, html, scss, media, serve);
+exports.default = series(scss, parallel(serve));
