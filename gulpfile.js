@@ -1,13 +1,14 @@
 const {src, dest, series, watch, parallel} = require('gulp');
-const gulp = require("gulp");
-const sass = require('gulp-sass')(require('sass'));
-const csso = require('gulp-csso');
-const htmlMin = require('gulp-htmlmin');
-const del = require('del');
-const autoprefixer = require('gulp-autoprefixer')
-const concat = require('gulp-concat')
-const sourcemaps = require('gulp-sourcemaps')
-const sync = require('browser-sync').create();
+
+const gulp          = require("gulp");
+const sass          = require('gulp-sass')(require('sass'));
+const csso          = require('gulp-csso');
+const htmlMin       = require('gulp-htmlmin');
+const del           = require('del');
+const autoprefixer  = require('gulp-autoprefixer')
+const concat        = require('gulp-concat')
+const sourcemaps    = require('gulp-sourcemaps')
+const sync          = require('browser-sync').create();
 
 //Работа с SCSS
 function scss() {
