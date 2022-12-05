@@ -44,7 +44,8 @@ function clear(){
 //Режим просмотра
 function serve(){
     sync.init({
-        server: './dist'
+        server: './dist',
+        notify: false
     })
     watch('src/**.html', series(html)).on('change', sync.reload)
     watch('src/style/**.scss', series(scss)).on('change', sync.reload)
@@ -52,4 +53,4 @@ function serve(){
 
 exports.clear = clear;
 exports.build = series(clear, html, scss, media, serve);
-exports.default = series(scss, parallel(serve));
+exports.default = parallel(clear, html, scss, media, serve);
