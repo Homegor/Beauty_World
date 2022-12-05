@@ -57,4 +57,4 @@ function serve(){
 
 exports.clear = clear;
 exports.build = series(clear, html, scss, media);
-exports.default = series(scss, parallel(devServe,serve));
+exports.default = series(clear, html, scss, media, scss, parallel(devServe,serve));
