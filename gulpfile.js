@@ -84,7 +84,7 @@ async function images() {
 }
 
 function cleanimg() {
-    return src('app/images/dest/', {allowEmpty: true}).pipe(clean()) // Удаляем всё содержимое папки "app/images/dest/"
+    return src(['app/images/dest/', 'dist/images/'], {allowEmpty: true}).pipe(clean()) // Удаляем всё содержимое папки "app/images/dest/"
 }
 
 function buildcopy() {
