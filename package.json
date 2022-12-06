@@ -1,36 +1,30 @@
 {
-  "name": "beauty_world",
+  "name": "myproject",
   "version": "1.0.0",
   "description": "",
-  "main": "gulpfile.js",
+  "main": "index.js",
   "scripts": {
     "start": "gulp",
     "build": "gulp build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/homegor/Beauty_World.git"
-  },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/homegor/Beauty_World/issues"
-  },
-  "homepage": "https://github.com/homegor/Beauty_World#readme",
-  "dependencies": {
-    "bootstrap": "^5.2.2",
-    "browser-sync": "^2.27.10",
-    "del": "^6.1.1",
-    "normalize.css": "^8.0.1"
-  },
   "devDependencies": {
+    "browser-sync": "^2.27.10",
+    "compress-images": "^2.0.5",
+    "gifsicle": "^5.3.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
-    "gulp-csso": "^4.0.1",
-    "gulp-htmlmin": "^5.0.1",
+    "gulp-less": "^5.0.0",
+    "gulp-newer": "^1.4.0",
     "gulp-sass": "^5.1.0",
+    "gulp-uglify-es": "^3.0.0",
+    "jquery": "^3.6.1",
+    "pngquant-bin": "^6.0.0",
     "gulp-sourcemaps": "^3.0.0",
-    "sass": "^1.56.1"
+    "sass": "^1.55.0"
   }
 }
