@@ -83,10 +83,6 @@ async function images() {
     )
 }
 
-function cleanimg() {
-    return src('app/images/dest/', {allowEmpty: true}).pipe(clean()) // Удаляем всё содержимое папки "app/images/dest/"
-}
-
 function buildcopy() {
     return src([ // Выбираем нужные файлы
         'app/css/**/*.min.css',
@@ -98,7 +94,7 @@ function buildcopy() {
 }
 
 function cleandist() {
-    return src('dist', {allowEmpty: true}).pipe(clean()) // Удаляем всё содержимое папки "dist/"
+    return src(['dist', 'app/css', 'app/images/dest/'], {allowEmpty: true}).pipe(clean()) // Удаляем всё содержимое папки "dist/"
 }
 
 function startwatch() {
@@ -130,7 +126,7 @@ exports.styles = styles;
 exports.images = images;
 
 // Экспортируем функцию cleandist() и cleanimg()
-exports.clean = series(cleandist, cleanimg);
+exports.clean = cleandist;
 
 // Создаём новый таск "build", который последовательно выполняет нужные операции
 exports.build = series(cleandist, styles, scripts, images, buildcopy);
