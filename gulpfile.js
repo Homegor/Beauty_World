@@ -14,8 +14,8 @@ const concat = require('gulp-concat');
 const uglify = require('gulp-uglify-es').default;
 
 // Подключаем модули gulp-scss и gulp-less
-// const scss = require('gulp-sass')(require('sass'));
-// const less = require('gulp-less');
+const scss = require('gulp-sass')(require('sass'));
+const less = require('gulp-less');
 
 // Подключаем Autoprefixer
 const autoprefixer = require('gulp-autoprefixer');
@@ -53,7 +53,8 @@ function scripts() {
 }
 
 function styles() {
-    return src('app/' + preprocessor + '/main.' + preprocessor + '') // Выбираем источник: "app/scss/main.scss" или "app/less/main.less"
+    return src('app/scss/*.scss') // Выбираем источник: "app/scss/main.scss" или "app/less/main.less"
+        .pipe(sourcemaps.init({largeFile: true}))
         .pipe(eval(preprocessor)()) // Преобразуем значение переменной "preprocessor" в функцию
         .pipe(concat('app.min.css')) // Конкатенируем в файл app.min.js
         .pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true })) // Создадим префиксы с помощью Autoprefixer
@@ -61,6 +62,7 @@ function styles() {
         .pipe(sourcemaps.write('', {includeContent: false}))
         .pipe(dest('app/css/')) // Выгрузим результат в папку "app/css/"
         .pipe(browserSync.stream()) // Сделаем инъекцию в браузер
+
 }
 
 async function images() {
