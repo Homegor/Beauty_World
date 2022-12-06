@@ -69,9 +69,9 @@ function styles() {
 async function images() {
     imagecomp(
         "app/images/src/**/*", // Берём все изображения из папки источника
-        "app/images/dest/", // Выгружаем оптимизированные изображения в папку назначения
+        ["app/images/dest/", "dist/images/"], // Выгружаем оптимизированные изображения в папку назначения
         { compress_force: false, statistic: true, autoupdate: true }, false, // Настраиваем основные параметры
-        { jpg: { engine: "mozjpeg", command: ["-quality", "75"] } }, // Сжимаем и оптимизируем изображеня
+        { jpg: { engine: "mozjpeg", command: ["-quality", "75"] } }, // Сжимаем и оптимизируем изображения
         { png: { engine: "pngquant", command: ["--quality=75-100", "-o"] } },
         { svg: { engine: "svgo", command: "--multipass" } },
         { gif: { engine: "gifsicle", command: ["--colors", "64", "--use-col=web"] } },
@@ -92,6 +92,7 @@ function buildcopy() {
         'app/css/**/*.min.css',
         'app/js/**/*.min.js',
         'app/images/dest/**/*',
+        'dist/images/dest',
         'app/**/*.html',
     ], { base: 'app' }) // Параметр "base" сохраняет структуру проекта при копировании
         .pipe(dest('dist')) // Выгружаем в папку с финальной сборкой
