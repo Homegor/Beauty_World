@@ -46,7 +46,7 @@ function clear(){
 function devServe(){
     sync.init({
         server: './dist',
-        notify: false
+        notify: true
     })
 }
 
@@ -55,7 +55,11 @@ function serve(){
     watch('src/**.html', series(html)).on('change', sync.reload)
     watch('src/style/**.scss', series(scss)).on('change', sync.reload)
 }
-
+exports.scss = scss;
+exports.html = html;
+exports.media = media;
 exports.clear = clear;
+
+
 exports.build = series(clear, html, scss, media);
 exports.default = series(clear, html, scss, media, scss, parallel(devServe,serve));
