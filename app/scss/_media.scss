@@ -1,6 +1,6 @@
 /* Large Devices, Wide Screens */
 @media screen and (max-width: 1440px){
-  .gallery__gallery{justify-content: flex-start;flex-wrap: nowrap;}
+  .gallery__gallery{justify-content: flex-start;flex-wrap: nowrap;overflow: scroll}
 }
 @media screen and (max-width: 1110px){
   .hero__media{display: none;}
