@@ -14,8 +14,8 @@ const concat = require('gulp-concat');
 const uglify = require('gulp-uglify-es').default;
 
 // Подключаем модули gulp-scss и gulp-less
-const scss = require('gulp-sass')(require('sass'));
-const less = require('gulp-less');
+/*const scss = require('gulp-sass')(require('sass'));
+const less = require('gulp-less');*/
 
 // Подключаем Autoprefixer
 const autoprefixer = require('gulp-autoprefixer');
@@ -69,9 +69,9 @@ function styles() {
 async function images() {
     imagecomp(
         "app/images/src/**/*", // Берём все изображения из папки источника
-        ["app/images/dest/", "dist/images/"], // Выгружаем оптимизированные изображения в папку назначения
+        "app/images/dest/", // Выгружаем оптимизированные изображения в папку назначения
         { compress_force: false, statistic: true, autoupdate: true }, false, // Настраиваем основные параметры
-        { jpg: { engine: "mozjpeg", command: ["-quality", "75"] } }, // Сжимаем и оптимизируем изображения
+        { jpg: { engine: "mozjpeg", command: ["-quality", "75"] } }, // Сжимаем и оптимизируем изображеня
         { png: { engine: "pngquant", command: ["--quality=75-100", "-o"] } },
         { svg: { engine: "svgo", command: "--multipass" } },
         { gif: { engine: "gifsicle", command: ["--colors", "64", "--use-col=web"] } },
@@ -84,7 +84,7 @@ async function images() {
 }
 
 function cleanimg() {
-    return src(['app/images/dest/', 'dist/images/'], {allowEmpty: true}).pipe(clean()) // Удаляем всё содержимое папки "app/images/dest/"
+    return src('app/images/dest/', {allowEmpty: true}).pipe(clean()) // Удаляем всё содержимое папки "app/images/dest/"
 }
 
 function buildcopy() {
@@ -92,7 +92,6 @@ function buildcopy() {
         'app/css/**/*.min.css',
         'app/js/**/*.min.js',
         'app/images/dest/**/*',
-        'dist/images/dest',
         'app/**/*.html',
     ], { base: 'app' }) // Параметр "base" сохраняет структуру проекта при копировании
         .pipe(dest('dist')) // Выгружаем в папку с финальной сборкой
@@ -130,8 +129,8 @@ exports.styles = styles;
 // Экспорт функции images() в таск images
 exports.images = images;
 
-// Экспортируем функцию cleandist() и cleanimg()
-exports.clean = series(cleandist, cleanimg);
+// Экспортируем функцию cleanimg() как таск cleanimg
+exports.cleanimg = cleanimg;
 
 // Создаём новый таск "build", который последовательно выполняет нужные операции
 exports.build = series(cleandist, styles, scripts, images, buildcopy);
