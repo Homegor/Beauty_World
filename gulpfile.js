@@ -90,9 +90,9 @@ function cleanimg() {
 function buildcopy() {
     return src([ // Выбираем нужные файлы
         'app/css/**/*.min.css',
+        'app/doc/*',
         'app/js/**/*.min.js',
         'app/images/dest/**/*',
-        'app/doc/*.*',
         'app/**/*.html',
     ], { base: 'app' }) // Параметр "base" сохраняет структуру проекта при копировании
         .pipe(dest('dist')) // Выгружаем в папку с финальной сборкой
