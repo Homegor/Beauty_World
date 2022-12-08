@@ -1,3 +1,9 @@
-function myFunction() {
-    alert("I am an alert box!");
+function href_link() {
+    alert("УПССССС!\n К сожалению ссылки нет.\n Однако текст приятен для тебя. \n ЗНАЙ!!! Ты прекрасна(ен)!!!:)");
+}
+function phone_number(){
+    alert("Эта ссылка переносит вас на быстрый звонок контакту, не вводя его номер телефона.")
+}
+function mail_too(){
+    alert("Эта ссылка переносит вас на быструю отправку Email")
 }

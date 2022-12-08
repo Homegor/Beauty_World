@@ -36,7 +36,7 @@ const sourcemaps = require('gulp-sourcemaps')
 function browsersync() {
     browserSync.init({ // Инициализация Browsersync
         server: { baseDir: 'app/' }, // Указываем папку сервера
-        notify: false, // Отключаем уведомления
+        notify: true, // Отключаем уведомления: true или false
         online: true // Режим работы: true или false
     })
 }
@@ -92,6 +92,7 @@ function buildcopy() {
         'app/css/**/*.min.css',
         'app/js/**/*.min.js',
         'app/images/dest/**/*',
+        'app/doc/*.*',
         'app/**/*.html',
     ], { base: 'app' }) // Параметр "base" сохраняет структуру проекта при копировании
         .pipe(dest('dist')) // Выгружаем в папку с финальной сборкой
