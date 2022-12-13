@@ -1,5 +1,5 @@
-// Определяем переменную "preprocessor"
-let preprocessor = 'scss';
+/*// Определяем переменную "preprocessor"
+let preprocessor = 'scss';*/
 
 // Определяем константы Gulp
 const { src, dest, parallel, series, watch } = require('gulp');
@@ -45,7 +45,7 @@ function scripts() {
     return src([ // Берём файлы из источников
         'node_modules/jquery/dist/jquery.min.js', // Пример подключения библиотеки
         'app/js/app.js',//При добавлении нового файла js, добавить строку
-        'app/js/tabs.js'// Пользовательские скрипты, использующие библиотеку, должны быть подключены в конце
+        'app/js/modules.js'// Пользовательские скрипты, использующие библиотеку, должны быть подключены в конце
     ])
         .pipe(concat('app.min.js')) // Конкатенируем в один файл
         .pipe(uglify()) // Сжимаем JavaScript
@@ -56,7 +56,7 @@ function scripts() {
 function styles() {
     return src('app/scss/*.scss') // Выбираем источник: "app/scss/main.scss" или "app/less/main.less"
         .pipe(sourcemaps.init({largeFile: true}))
-        .pipe(eval(preprocessor)()) // Преобразуем значение переменной "preprocessor" в функцию
+        .pipe(eval(scss)()) // Преобразуем значение переменной "preprocessor" в функцию
         .pipe(concat('app.min.css')) // Конкатенируем в файл app.min.js
         .pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true })) // Создадим префиксы с помощью Autoprefixer
         .pipe(cleancss( { level: { 1: { specialComments: 0 } }/* , format: 'beautify' */ } )) // Минифицируем стили
@@ -108,7 +108,7 @@ function startwatch() {
     watch(['app/**/*.js', '!app/**/*.min.js'], scripts);
 
     // Мониторим файлы препроцессора на изменения
-    watch('app/**/' + preprocessor + '/**/*', styles);
+    watch('app/**/' + 'scss' + '/**/*', styles);
 
     // Мониторим файлы HTML на изменения
     watch('app/**/*.html').on('change', browserSync.reload);
