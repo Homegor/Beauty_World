@@ -26,6 +26,9 @@
     & a{
         color: $blue;
     }
+    & a:hover{
+        color: darken($blue, 25%)
+    }
 }
 .info-1:not(:last-child), .info-2:not(:last-child){
     margin-right: 30px;
