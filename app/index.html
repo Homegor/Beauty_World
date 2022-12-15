@@ -49,16 +49,16 @@
                 <div class="hero__content">
                     <h1 class="hero__title">Создай свой образ <br> вместе с нами</h1>
                     <p class="hero__subtitle">Идеальный образ за 60 минут</p>
-                    <button class="hero__btn btn" onclick="href_link()">Записаться онлайн</button>
+                    <button class="hero__btn btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Записаться онлайн</button>
                 </div>
                 <div class="hero__media">
                     <img class="hero__girl" src="images/dest/girl.png" alt="фото">
                 </div>
                 <div class="hero__social">
                     <ul>
-                        <li class="social"><a href="#" onclick="href_link();return false"><img src="images/dest/vk.png" alt="VK"/></a></li>
-                        <li><a href="#" onclick="href_link();return false"><img src="images/dest/inst.png" alt="Inst"/></a></li>
-                        <li><a href="#" onclick="href_link();return false"><img src="images/dest/yt.png" alt="YT"/></a></li>
+                        <li class="social"><a href="#" onclick="href_social();return false"><img src="images/dest/vk.png" alt="VK"/></a></li>
+                        <li><a href="#" onclick="href_social();return false"><img src="images/dest/inst.png" alt="Inst"/></a></li>
+                        <li><a href="#" onclick="href_social();return false"><img src="images/dest/yt.png" alt="YT"/></a></li>
                     </ul>
                 </div>
             </div>
@@ -76,7 +76,7 @@
                     <div class="video">
                         <div class="video__blackout">
                             <img class="video__img" src="images/dest/video.png" alt="video">
-                            <a class="video__link link" onclick="href_link();return false" href="#"><img src="images/dest/play.png" alt="123">Короткое видео о нас</a>
+                            <a class="video__link link" onclick="href_video();return false" href="#"><img src="images/dest/play.png" alt="123">Короткое видео о нас</a>
                         </div>
                     </div>
                 </div>
@@ -119,19 +119,19 @@
                                 <img class="services__img" src="images/dest/nail.png" alt="маникюр">
                                 <h3 class="services__subtitle">Маникюр</h3>
                                 <p class="services__text">Аппаратный, комбинированный или классический.</p>
-                                <button class="btn services__btn">Записаться</button>
+                                <button class="btn services__btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Записаться</button>
                             </div>
                             <div class="services__info info-1">
                                 <img class="services__img" src="images/dest/nail.png" alt="маникюр">
                                 <h3 class="services__subtitle">Покрытие гель-лак</h3>
                                 <p class="services__text">Гель-лак наносится в несколько слоев с использованием базы и топа. Каждый слой полимеризуется в LED-лампе.</p>
-                                <button class="btn services__btn">Записаться</button>
+                                <button class="btn services__btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Записаться</button>
                             </div>
                             <div class="services__info info-1">
                                 <img class="services__img" src="images/dest/nail.png" alt="маникюр">
                                 <h3 class="services__subtitle">Бразильский маникюр</h3>
                                 <p class="services__text">Выполняется в одноразовых перчатках наполненных увлажняющим лосьоном.</p>
-                                <button class="btn services__btn">Записаться</button>
+                                <button class="btn services__btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Записаться</button>
                             </div>
                         </div>
                         <div class="services__box-2">
@@ -139,13 +139,13 @@
                                 <img class="services__img" src="images/dest/nail.png" alt="маникюр">
                                 <h3 class="services__subtitle">Маникюр</h3>
                                 <p class="services__text">Аппаратный, комбинированный или классический.</p>
-                                <button class="btn services__btn">Записаться</button>
+                                <button class="btn services__btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Записаться</button>
                             </div>
                             <div class="services__info info-2">
                                 <img class="services__img" src="images/dest/nail.png" alt="маникюр">
                                 <h3 class="services__subtitle">Парафинотерапия</h3>
                                 <p class="services__text">Благодаря этой процедуре увлажнение кожи увеличивается на 80%, также выводит токсины и укрепляет суставы.</p>
-                                <button class="btn services__btn">Записаться</button>
+                                <button class="btn services__btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Записаться</button>
                             </div>
                         </div>
                     </div>
@@ -159,17 +159,17 @@
                 </div>
                 <div class="tabs">
                     <nav class="tabs__navigation">
-                        <ul  class="tabs__active">
-                            <li><a class="tab" href="#">Стрижка и укладка</a></li>
-                            <li><a class="tab" href="#">Косметология</a> </li>
-                            <li><a class="tab" href="#">Маникюр и педикюр</a></li>
-                            <li><a class="tab" href="#">Макияж</a></li>
-                            <li><a class="tab" href="#">Брови и ресницы</a></li>
-                            <li><a class="tab" href="#">Массаж</a></li>
+                        <ul  class="tabs__container">
+                            <li class="tabs__link tabs__active">Стрижка и укладка</li>
+                            <li class="tabs__link">Косметология</li>
+                            <li class="tabs__link">Маникюр и педикюр</li>
+                            <li class="tabs__link">Макияж</li>
+                            <li class="tabs__link">Брови и ресницы</li>
+                            <li class="tabs__link">Массаж</li>
                         </ul>
                     </nav>
                 </div>
-                <div class="name">
+                <div class="name name__active">
                     <div class="name__box">
                         <div class="name__left">
                             <p class="name__title">Женская стрижка</p>
@@ -256,7 +256,7 @@
                         <div class="masters__container">
                             <div class="masters__box">
                                 <img class="masters__img" src="images/dest/girl_1.png" alt="alt">
-                                <a class="masters__link link" href="#">Записаться <br> к мастеру</a>
+                                <a class="masters__link link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Записаться <br> к мастеру</a>
                             </div>
                             <div class="masters__name">
                                 <p class="masters__fest-name">Краснова Ирина</p>
@@ -267,7 +267,7 @@
                         <div class="masters__container">
                             <div class="masters__box">
                                 <img class="masters__img" src="images/dest/girl_2.png" alt="alt">
-                                <a class="masters__link link" href="#">Записаться <br> к мастеру</a>
+                                <a class="masters__link link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Записаться <br> к мастеру</a>
                             </div>
                             <div class="masters__name">
                                 <p class="masters__fest-name">Калилова Жанна</p>
@@ -278,7 +278,7 @@
                         <div class="masters__container">
                             <div class="masters__box">
                                 <img class="masters__img" src="images/dest/girl_3.png" alt="alt">
-                                <a class="masters__link link" href="#">Записаться <br> к мастеру</a>
+                                <a class="masters__link link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Записаться <br> к мастеру</a>
                             </div>
                             <div class="masters__name">
                                 <p class="masters__fest-name">Киселева Алина</p>
@@ -289,7 +289,7 @@
                         <div class="masters__container">
                             <div class="masters__box">
                                 <img class="masters__img" src="images/dest/girl_4.png" alt="alt">
-                                <a class="masters__link link" href="#">Записаться <br> к мастеру</a>
+                                <a class="masters__link link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Записаться <br> к мастеру</a>
                             </div>
                             <div class="masters__name">
                                 <p class="masters__fest-name">Иванова Елена</p>
@@ -305,9 +305,9 @@
             <div class="gallery gallery__work">
                 <div class="gallery__container mw">
                     <h1 class="gallery__title title">Наши работы</h1>
-                    <div class="btn__slider">
-                        <button class="btn__prev">←</button>
-                        <button class="btn__next">→</button>
+                    <div class="gallery__slider">
+                        <button class="gallery__prev">←</button>
+                        <button class="gallery__next">→</button>
                     </div>
                 </div>
                 <div class="gallery__gallery">
@@ -378,14 +378,14 @@
                                     <li class="reference__title title"><h1>Контакты</h1></li>
                                     <li class="reference__street"><p >Томск, проспект Ленина, дом 13</p></li>
                                     <li class="reference__phone"><a href="tel: +74996861762" onclick="phone_number();return false">8 (499) 686-17-62</a></li>
-                                    <li class="reference__email"><a class="mail-to" href="mailto:info@more-krasoty.ru" onclick="mail_too();return false">info@more-krasoty.ru</a></li>
+                                    <li class="reference__email politic"><a href="mailto:info@more-krasoty.ru" onclick="mail_too();return false">info@more-krasoty.ru</a></li>
                                 </ul>
                                 <div class="reference__social">
                                     <p class="reference__subtitle">Мы в социальных сетях</p>
                                     <ul class="reference__social-all">
-                                        <li class="reference__social-icon"><a onclick="href_link();return false" href="#"><img src="images/dest/vk.png" alt="vk"></a></li>
-                                        <li class="reference__social-icon"><a onclick="href_link();return false" href="#"><img src="images/dest/inst.png" alt="inst"></a></li>
-                                        <li class="reference__social-icon"><a onclick="href_link();return false" href="#"><img src="images/dest/yt.png" alt="yt"></a></li>
+                                        <li class="reference__social-icon"><a onclick="href_social();return false" href="#"><img src="images/dest/vk.png" alt="vk"></a></li>
+                                        <li class="reference__social-icon"><a onclick="href_social();return false" href="#"><img src="images/dest/inst.png" alt="inst"></a></li>
+                                        <li class="reference__social-icon"><a onclick="href_social();return false" href="#"><img src="images/dest/yt.png" alt="yt"></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -405,8 +405,8 @@
                                         <input class="form__phone" type="tel" name="phone" placeholder="+7(___)___-__-__">
                                     </label>
                                     <br>
-                                    <button class="btn form__button">Записаться</button>
-                                    <p class="form__politic">Нажимая на кнопку вы соглашаетесь с <a class="form__politic-text" href="doc/opd.pdf" target="_blank">обработкой<br> персональных данных</a></p>
+                                    <button class="btn form__button" onclick="href_link();return false">Записаться</button>
+                                    <p class="form__politic">Нажимая на кнопку вы соглашаетесь с <a class="form__politic-text politic" href="doc/opd.pdf" target="_blank">обработкой<br> персональных данных</a></p>
                                 </form>
                             </div>
                         </div>
@@ -424,7 +424,7 @@
                 <div class="footer__mine">
                     <ul class="footer__information">
                         <li class="footer__title"><p>© 2020 «Море красоты»</p></li>
-                        <li class="footer__politic"><a class="footer__politic-text" href="doc/pk.pdf" target="_blank">Политика конфиденциальности</a></li>
+                        <li class="footer__politic politic"><a href="doc/pk.pdf" target="_blank">Политика конфиденциальности</a></li>
                     </ul>
                 </div>
                 <nav class="footer__navigation navigation">
@@ -439,6 +439,37 @@
         </div>
     </footer>
 </div>
+<!-- Модальное окно -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title modal__title" id="exampleModalLabel">Быстрая запись</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body form">
+                <div class="form__modal">
+                    <div class="form__text">
+                        <p class="form__subtitle">Наш менеджер перезвонит в течение нескольких<br> минут, уточнит подробности и согласует время.</p>
+                    </div>
+                    <form class="form__action" action="#" target="_blank">
+                        <label>
+                            <input class="form__name" type="text" name="firstname" placeholder="Ваше имя">
+                        </label>
+                        <br>
+                        <label>
+                            <input class="form__phone" type="tel" name="phone" placeholder="+7(___)___-__-__">
+                        </label>
+                        <br>
+                        <button class="btn form__button" onclick="href_link();return false">Записаться</button>
+                        <p class="form__politic">Нажимая на кнопку вы соглашаетесь с <a class="form__politic-text politic" href="doc/opd.pdf" target="_blank">обработкой<br> персональных данных</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Модальное окно -->
 <script src="js/app.min.js"></script>
 </body>
 </html>

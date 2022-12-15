@@ -2,6 +2,37 @@
 @import "vars";
 @import "media";
 
+.full{
+    background-color: $bs;
+}
+.wrapper .main {
+    flex: 1;
+}
+.header,
+.footer {
+    flex-shrink: 0;
+}
+.mw{
+    max-width: 1110px;
+    margin: auto;
+}
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines {
+    display: none;
+}
+.politic{
+    text-decoration: underline;
+    color: $blue;
+    & a{
+        color: $blue;
+    }
+}
+.info-1:not(:last-child), .info-2:not(:last-child){
+    margin-right: 30px;
+}
+.info-1{
+    padding-bottom: 48px;
+}
 .btn{
     background: $orange;
     border-radius: 24px ;
@@ -14,6 +45,9 @@
         background: darken($orange, 5%);
         cursor: pointer;
         color: $white;
+    }
+    &:focus{
+        box-shadow: 0 0 0 0.15rem rgb(233 85 40 / 35%);
     }
 }
 :not(.btn-check)+.btn:active{
@@ -59,9 +93,20 @@
         color: #333333;
     }
 }
-
 .navigation{
     margin-top: 36px;
+    font-weight: $fw-500;
+    font-size: $fs-14;
+    & a:hover{
+        color: $green;
+        transition: .5s;
+    }
+    & ul li{
+        display: inline;
+    }
+    & li:not(:last-child){
+        margin-right: 28px;
+    }
     &__active{
         margin: 0;
         font-size: 14px;
@@ -179,6 +224,13 @@
     justify-content: center;
     padding-top: 26px;
     text-align: center;
+    &__icon{
+        width: 350px;
+        height: auto;
+    }
+    &__icon:not(:last-child){
+        margin-right: 30px;
+    }
     &__title{
         font-weight: $fw-600;
         font-size: $fs-18;
@@ -194,6 +246,10 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
+    }
+    &__info{
+        width: 350px;
+        height: auto;
     }
     &__title{
         font-weight: $fw-700;
@@ -214,13 +270,37 @@
         font-size: $fs-12;
     }
 }
+.price__title{
+    font-weight: $fw-700;
+    font-size: $fs-48;
+}
 .tabs{
     padding: 32px 0 19px 0;
-    & a{
+    &__navigation{
         font-weight: $fw-500;
         font-size: $fs-14;
     }
-    & a:hover, & a:focus{
+    &__navigation ul li{
+        display: inline;
+    }
+    &__container li:not(:last-child){
+        margin-right: 28px;
+    }
+    &__active a:hover{
+        color: $green;
+        transition: .5s;
+    }
+    &__link:hover{
+        color: $green;
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 14px;
+    }
+    & li{
+        font-weight: $fw-500;
+        font-size: $fs-14;
+    }
+    & li:hover, & li:focus{
         border-bottom: 2px solid $green;
         padding-bottom: 6px;
     }
@@ -346,7 +426,22 @@
     &__img:not(:last-child){
         margin-right: 29px;
     }
+    &__next, &__prev{
+        background-color: $white;
+        color: $green;
+        font-size: $fs-25;
+        height: 40px;
+        width: 40px;
+        border-width: 0;
+        border-radius: 50px;
+        cursor: pointer;
+    }
+    &__next:hover, &__prev:hover{
+        transition: all 0.5s ease-in-out;
+        background: darken($white, 8%);
+    }
 }
+
 .brands{
     display: block;
     max-width: 1110px;
@@ -386,6 +481,10 @@
         padding-top: 38px;
     }
 }
+.left-right{
+    max-width: 1015px;
+    margin: auto;
+}
 .reference{
     &__title > h1{
         font-weight: $fw-700;
@@ -394,6 +493,9 @@
     }
     &__phone{
         margin: 20px 0;
+    }
+    &__phone a{
+        color: $grey;
     }
     &__street, &__phone, &__email{
         font-size: 16px;
@@ -405,6 +507,9 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+    }
+    &__social-icon{
+        margin: 0;
     }
     &__social-icon:not(:last-child){
         margin-right: 26px;
@@ -445,7 +550,7 @@
     &__name:focus, &__phone:focus {
         border-color: #bdbdbd;
         outline: 0;
-        box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
+        box-shadow: 0 0 0 0.15rem rgb(233 85 40 / 35%);
     }
     &__phone{
         margin: 20px 0;
@@ -476,6 +581,9 @@
         margin-top: 0;
     }
 }
-
-
+.modal{
+    &__title{
+        margin: 0;
+    }
+}
 @import "media";

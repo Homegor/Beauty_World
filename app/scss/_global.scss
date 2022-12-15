@@ -14,7 +14,7 @@ body{
   min-width: 320px;
   margin: auto;
 }
-a, p, h1, h2, h3, h4, button, input{
+a, p, h1, h2, h3, h4, h5, h6, button, input, ul, li{
   font-family: 'Montserrat', sans-serif;
   text-decoration: none;
   color: $grey;
@@ -30,76 +30,8 @@ label{
   display: block;
 }
 
-/*=========================OTHER=========================*/
 
-.full{
-  background-color: $bs;
-}
-.wrapper .main {
-  flex: 1;
-}
-.header,
-.footer {
-  flex-shrink: 0;
-}
-.mw{
-  max-width: 1110px;
-  margin: auto;
-}
-.navigation, .tabs__navigation{
-  font-style: normal;
-  font-weight: 500;
-  font-size: $fs-14;
-}
-.navigation ul li, .tabs__navigation ul li, .brands ul li{
-  display: inline;
-}
-.navigation li:not(:last-child), .tabs__active li:not(:last-child){
-  margin-right: 28px;
-}
-.navigation a:hover, .tabs__active a:hover{
-  color: $green;
-  transition: .5s;
-}
-.services__info, .benefit__icon{
-  width: 350px;
-  height: auto;
-}
-.price__title{
-  font-weight: $fw-700;
-  font-size: $fs-48;
-}
-.btn__next, .btn__prev{
-  background-color: $white;
-  color: $green;
-  font-size: $fs-25;
-  height: 40px;
-  width: 40px;
-  border-width: 0;
-  border-radius: 50px;
-  cursor: pointer;
-}
-.btn__next:hover, .btn__prev:hover{
-  transition: all 0.5s ease-in-out;
-  background: darken($white, 8%);
-}
-.reference__email, .form__politic-text, .footer__politic-text{
-  text-decoration: underline;
-}
-.mail-to, .form__politic-text, .footer__politic-text{
-  color: $blue;
-}
-.benefit__icon:not(:last-child), .info-1:not(:last-child), .info-2:not(:last-child){
-  margin-right: 30px;
-}
-.info-1{
-  padding-bottom: 48px;
-}
-.navbar input[type="checkbox"],
-.navbar .hamburger-lines {
-  display: none;
-}
-.left-right{
-  max-width: 1015px;
-  margin: auto;
-}
+
+
+
+
