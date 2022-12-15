@@ -1,6 +1,3 @@
-/*// Определяем переменную "preprocessor"
-let preprocessor = 'scss';*/
-
 // Определяем константы Gulp
 const { src, dest, parallel, series, watch } = require('gulp');
 
@@ -15,7 +12,7 @@ const uglify = require('gulp-uglify-es').default;
 
 // Подключаем модули gulp-scss и gulp-less
 const scss = require('gulp-sass')(require('sass'));
-const less = require('gulp-less');
+// const less = require('gulp-less');
 
 // Подключаем Autoprefixer
 const autoprefixer = require('gulp-autoprefixer');
