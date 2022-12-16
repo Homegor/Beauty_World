@@ -61,6 +61,7 @@
   .masters__container{display: flex; align-items: center;}
   .masters__container:not(:last-child){margin-right: 0}
   .masters__name{text-align: left; margin-left: 8px;}
+  .hero__social-center:not(:last-child){margin: 0 9px;}
 }
 @media screen and (max-width: 520px) {
   .hero__title{text-align: center}
