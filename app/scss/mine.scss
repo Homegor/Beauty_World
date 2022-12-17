@@ -174,7 +174,7 @@
     }
 }
 .about {
-    &__information {
+    &__information{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -182,7 +182,7 @@
         align-items: flex-end;
     }
 
-    &__title {
+    &__title{
         font-weight: $fw-700;
         font-size: $fs-48;
         line-height: 59px;
