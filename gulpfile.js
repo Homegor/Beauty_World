@@ -84,6 +84,9 @@ async function images() {
 function cleanimg() {
     return src('app/images/dest/', {allowEmpty: true}).pipe(clean()) // Удаляем всё содержимое папки "app/images/dest/"
 }
+function cleanall() {
+    return src(['app/images/dest/', 'app/css/', 'dist'], {allowEmpty: true}).pipe(clean()) // Удаляем всё содержимое папки "app/images/dest/"
+}
 
 function buildcopy() {
     return src([ // Выбираем нужные файлы
@@ -130,6 +133,9 @@ exports.images = images;
 
 // Экспортируем функцию cleanimg() как таск cleanimg
 exports.cleanimg = cleanimg;
+
+// Экспортируем функцию cleanall() как таск cleanall
+exports.cleanall = cleanall;
 
 // Создаём новый таск "build", который последовательно выполняет нужные операции
 exports.build = series(cleandist, styles, scripts, images, buildcopy);
