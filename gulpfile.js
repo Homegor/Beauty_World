@@ -81,11 +81,20 @@ async function images() {
     )
 }
 
+function cleandist() {
+    return src('dist',
+        {allowEmpty: true})
+        .pipe(clean()) // Удаляем всё содержимое папки dist
+}
 function cleanimg() {
-    return src('app/images/dest/', {allowEmpty: true}).pipe(clean()) // Удаляем всё содержимое папки "app/images/dest/"
+    return src('app/images/dest/',
+        {allowEmpty: true})
+        .pipe(clean()) // Удаляем всё содержимое папки "app/images/dest/"
 }
 function cleanall() {
-    return src(['app/images/dest/', 'app/css/', 'dist'], {allowEmpty: true}).pipe(clean()) // Удаляем всё содержимое папки "app/images/dest/"
+    return src(['app/images/dest/', 'app/css/', 'dist'],
+        {allowEmpty: true})
+        .pipe(clean()) // Удаляем всё содержимое компилируемых папок
 }
 
 function buildcopy() {
@@ -99,9 +108,7 @@ function buildcopy() {
         .pipe(dest('dist')) // Выгружаем в папку с финальной сборкой
 }
 
-function cleandist() {
-    return src('dist', {allowEmpty: true}).pipe(clean()) // Удаляем всё содержимое папки "dist/"
-}
+
 
 function startwatch() {
 
