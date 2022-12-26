@@ -106,8 +106,8 @@
     & ul li{
         display: inline;
     }
-    & li:not(:last-child){
-        margin-right: 28px;
+    & li{
+        margin: 0 14px;
     }
     &__active{
         margin: 0;

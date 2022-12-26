@@ -1,4 +1,4 @@
-// Кнопки не отвечающие за действие
+// active button
 function href_link() {
     alert("УПССССС!\n Эта функция пока не работает\n Однако, спасибо за запись");
 }
@@ -14,4 +14,13 @@ function phone_number(){
 function mail_too(){
     alert("Эта ссылка переносит вас на быструю отправку Email")
 }
-// Tabs
+// active button end
+
+// Hamburger
+let menuBtn = document.querySelector('.menu-btn');
+let menu = document.querySelector('.navigation-top');
+menuBtn.addEventListener('click', function(){
+    menuBtn.classList.toggle('active');
+    menu.classList.toggle('active');
+})
+// Hamburger end
