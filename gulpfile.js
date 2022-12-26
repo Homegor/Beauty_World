@@ -81,6 +81,17 @@ async function images() {
     )
 }
 
+function buildcopy() {
+    return src([ // Выбираем нужные файлы
+        'app/css/**/*.min.css',
+        'app/doc/*',
+        'app/js/**/*.min.js',
+        'app/images/dest/**/*',
+        'app/**/*.html',
+    ], { base: 'app' }) // Параметр "base" сохраняет структуру проекта при копировании
+        .pipe(dest('dist')) // Выгружаем в папку с финальной сборкой
+}
+
 function cleandist() {
     return src('dist',
         {allowEmpty: true})
@@ -96,19 +107,6 @@ function cleanall() {
         {allowEmpty: true})
         .pipe(clean()) // Удаляем всё содержимое компилируемых папок
 }
-
-function buildcopy() {
-    return src([ // Выбираем нужные файлы
-        'app/css/**/*.min.css',
-        'app/doc/*',
-        'app/js/**/*.min.js',
-        'app/images/dest/**/*',
-        'app/**/*.html',
-    ], { base: 'app' }) // Параметр "base" сохраняет структуру проекта при копировании
-        .pipe(dest('dist')) // Выгружаем в папку с финальной сборкой
-}
-
-
 
 function startwatch() {
 
@@ -134,6 +132,9 @@ exports.scripts = scripts;
 
 // Экспортируем функцию styles() в таск styles
 exports.styles = styles;
+
+// Экспорт функции images() в таск images
+exports.images = images;
 
 // Экспорт функции images() в таск images
 exports.images = images;
