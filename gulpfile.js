@@ -81,10 +81,6 @@ async function images() {
     )
 }
 
-function cleanimg() {
-    return src('app/images/dest/', {allowEmpty: true}).pipe(clean()) // Удаляем всё содержимое папки "app/images/dest/"
-}
-
 function buildcopy() {
     return src([ // Выбираем нужные файлы
         'app/css/**/*.min.css',
@@ -97,7 +93,19 @@ function buildcopy() {
 }
 
 function cleandist() {
-    return src('dist', {allowEmpty: true}).pipe(clean()) // Удаляем всё содержимое папки "dist/"
+    return src('dist',
+        {allowEmpty: true})
+        .pipe(clean()) // Удаляем всё содержимое папки dist
+}
+function cleanimg() {
+    return src('app/images/dest/',
+        {allowEmpty: true})
+        .pipe(clean()) // Удаляем всё содержимое папки "app/images/dest/"
+}
+function cleanall() {
+    return src(['app/images/dest/', 'app/css/', 'dist'],
+        {allowEmpty: true})
+        .pipe(clean()) // Удаляем всё содержимое компилируемых папок
 }
 
 function startwatch() {
@@ -128,8 +136,14 @@ exports.styles = styles;
 // Экспорт функции images() в таск images
 exports.images = images;
 
+// Экспорт функции images() в таск images
+exports.images = images;
+
 // Экспортируем функцию cleanimg() как таск cleanimg
 exports.cleanimg = cleanimg;
+
+// Экспортируем функцию cleanall() как таск cleanall
+exports.cleanall = cleanall;
 
 // Создаём новый таск "build", который последовательно выполняет нужные операции
 exports.build = series(cleandist, styles, scripts, images, buildcopy);
