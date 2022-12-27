@@ -156,89 +156,144 @@
                 <div class="price__information">
                     <p class="price__title title">Услуги и цены</p>
                 </div>
-                <div class="tabs">
+                <div id="myTabs" class="tabs">
                     <nav class="tabs__navigation">
-                        <ul  class="tabs__container">
-                            <li class="tabs__link tabs__active">Стрижка и укладка</li>
-                            <li class="tabs__link">Косметология</li>
-                            <li class="tabs__link">Маникюр и педикюр</li>
-                            <li class="tabs__link">Макияж</li>
-                            <li class="tabs__link">Брови и ресницы</li>
-                            <li class="tabs__link">Массаж</li>
+                        <ul class="tabs__container">
+                            <li class="tabs__link" onclick="openTab(event, 'haircut')">Стрижка и укладка</li>
+                            <li class="tabs__link" onclick="openTab(event, 'cosmetology')">Косметология</li>
+                            <li class="tabs__link" onclick="openTab(event, 'nail')">Маникюр и педикюр</li>
+                            <li class="tabs__link" onclick="openTab(event, 'makeup')">Макияж</li>
+                            <li class="tabs__link" onclick="openTab(event, 'brows')">Брови и ресницы</li>
+                            <li class="tabs__link" onclick="openTab(event, 'massage')">Массаж</li>
                         </ul>
                     </nav>
-                </div>
-                <div class="name name__active">
-                    <div class="name__box">
-                        <div class="name__left">
-                            <p class="name__title">Женская стрижка</p>
-                            <p class="name__subtitle">Короткие волосы</p>
+                    <div id="haircut" class="name">
+                        <div class="name__box">
+                            <div class="name__left">
+                                <p class="name__title">Женская стрижка</p>
+                                <p class="name__subtitle">Короткие волосы</p>
+                            </div>
+                            <div class="name__right">
+                                <p class="name__price">1200 &#x20bd;</p>
+                            </div>
                         </div>
-                        <div class="name__right">
-                            <p class="name__price">1200 &#x20bd;</p>
+                        <div class="name__box">
+                            <div class="name__left">
+                                <p class="name__title">Стрижка бороды и усов</p>
+                                <p class="name__subtitle">Короткие волосы</p>
+                            </div>
+                            <div class="name__right">
+                                <p class="name__price">1200 &#x20bd;</p>
+                            </div>
+                        </div>
+                        <div class="name__box">
+                            <div class="name__left">
+                                <p class="name__title">Мужская стрижка</p>
+                                <p class="name__subtitle">Короткие волосы</p>
+                            </div>
+                            <div class="name__right">
+                                <p class="name__price">1200 &#x20bd;</p>
+                            </div>
+                        </div>
+                        <div class="name__box">
+                            <div class="name__left">
+                                <p class="name__title">Экспресс укладка</p>
+                                <p class="name__subtitle">Короткие волосы</p>
+                            </div>
+                            <div class="name__right">
+                                <p class="name__price">1200 &#x20bd;</p>
+                            </div>
+                        </div>
+                        <div class="name__box">
+                            <div class="name__left">
+                                <p class="name__title">Детский Стиль</p>
+                                <p class="name__subtitle">Короткие волосы</p>
+                            </div>
+                            <div class="name__right">
+                                <p class="name__price">1200 &#x20bd;</p>
+                            </div>
+                        </div>
+                        <div class="name__box">
+                            <div class="name__left">
+                                <p class="name__title">Укладка дневная</p>
+                                <p class="name__subtitle">Короткие волосы</p>
+                            </div>
+                            <div class="name__right">
+                                <p class="name__price">1200 &#x20bd;</p>
+                            </div>
+                        </div>
+                        <div class="name__box">
+                            <div class="name__left">
+                                <p class="name__title">Креативный Стиль</p>
+                                <p class="name__subtitle">Короткие волосы</p>
+                            </div>
+                            <div class="name__right">
+                                <p class="name__price">1200 &#x20bd;</p>
+                            </div>
+                        </div>
+                        <div class="name__box">
+                            <div class="name__left">
+                                <p class="name__title">Прическа вечерняя (свадебная)</p>
+                                <p class="name__subtitle">Короткие волосы</p>
+                            </div>
+                            <div class="name__right">
+                                <p class="name__price">3000 &#x20bd;</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="name__box">
-                        <div class="name__left">
-                            <p class="name__title">Стрижка бороды и усов</p>
-                            <p class="name__subtitle">Короткие волосы</p>
-                        </div>
-                        <div class="name__right">
-                            <p class="name__price">1200 &#x20bd;</p>
-                        </div>
-                    </div>
-                    <div class="name__box">
-                        <div class="name__left">
-                            <p class="name__title">Мужская стрижка</p>
-                            <p class="name__subtitle">Короткие волосы</p>
-                        </div>
-                        <div class="name__right">
-                            <p class="name__price">1200 &#x20bd;</p>
+                    <div id="cosmetology" class="name ">
+                        <div class="name__box">
+                            <div class="name__left">
+                                <p class="name__title">Женская стрижка</p>
+                                <p class="name__subtitle">Короткие волосы</p>
+                            </div>
+                            <div class="name__right">
+                                <p class="name__price">1200 &#x20bd;</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="name__box">
-                        <div class="name__left">
-                            <p class="name__title">Экспресс укладка</p>
-                            <p class="name__subtitle">Короткие волосы</p>
-                        </div>
-                        <div class="name__right">
-                            <p class="name__price">1200 &#x20bd;</p>
-                        </div>
-                    </div>
-                    <div class="name__box">
-                        <div class="name__left">
-                            <p class="name__title">Детский Стиль</p>
-                            <p class="name__subtitle">Короткие волосы</p>
-                        </div>
-                        <div class="name__right">
-                            <p class="name__price">1200 &#x20bd;</p>
+                    <div id="nail" class="name ">
+                        <div class="name__box">
+                            <div class="name__left">
+                                <p class="name__title">Стрижка бороды и усов</p>
+                                <p class="name__subtitle">Короткие волосы</p>
+                            </div>
+                            <div class="name__right">
+                                <p class="name__price">1200 &#x20bd;</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="name__box">
-                        <div class="name__left">
-                            <p class="name__title">Укладка дневная</p>
-                            <p class="name__subtitle">Короткие волосы</p>
-                        </div>
-                        <div class="name__right">
-                            <p class="name__price">1200 &#x20bd;</p>
-                        </div>
-                    </div>
-                    <div class="name__box">
-                        <div class="name__left">
-                            <p class="name__title">Креативный Стиль</p>
-                            <p class="name__subtitle">Короткие волосы</p>
-                        </div>
-                        <div class="name__right">
-                            <p class="name__price">1200 &#x20bd;</p>
+                    <div id="makeup" class="name ">
+                        <div class="name__box">
+                            <div class="name__left">
+                                <p class="name__title">Женская стрижка</p>
+                                <p class="name__subtitle">Короткие волосы</p>
+                            </div>
+                            <div class="name__right">
+                                <p class="name__price">1200 &#x20bd;</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="name__box">
-                        <div class="name__left">
-                            <p class="name__title">Прическа вечерняя (свадебная)</p>
-                            <p class="name__subtitle">Короткие волосы</p>
+                    <div id="brows" class="name ">
+                        <div class="name__box">
+                            <div class="name__left">
+                                <p class="name__title">Женская стрижка</p>
+                                <p class="name__subtitle">Короткие волосы</p>
+                            </div>
+                            <div class="name__right">
+                                <p class="name__price">1200 &#x20bd;</p>
+                            </div>
                         </div>
-                        <div class="name__right">
-                            <p class="name__price">3000 &#x20bd;</p>
+                    </div>
+                    <div id="massage" class="name ">
+                        <div class="name__box">
+                            <div class="name__left">
+                                <p class="name__title">Креативный Стиль</p>
+                                <p class="name__subtitle">Короткие волосы</p>
+                            </div>
+                            <div class="name__right">
+                                <p class="name__price">1200 &#x20bd;</p>
+                            </div>
                         </div>
                     </div>
                 </div>

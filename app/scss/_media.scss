@@ -25,20 +25,8 @@
 }
 /* Hamburger menu */
 @media screen and (max-width: 880px) {
-  .menu-btn {
-    width: 30px;
-    height: 30px;
-    position: fixed;
-    z-index:2;
-    overflow: hidden;
-  }
-  .menu-btn span {
-    width: 30px;
-    height: 2px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  .menu-btn {width: 30px;height: 30px;position: fixed;z-index:2;overflow: hidden;}
+  .menu-btn span {width: 30px;height: 2px;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);
     background-color: #222222;
     transition: all 0.5s;
   }
@@ -98,7 +86,7 @@
 }
 /* Small Devices, Tablets */
 @media screen and (max-width: 810px){
-  .tabs{overflow: auto; white-space: nowrap;}
+  .tabs__navigation{overflow: auto; white-space: nowrap;}
 }
 @media screen and (max-width: 770px) {
   .benefit__icon:not(:last-child), .info-1:not(:last-child), .info-2:not(:last-child){margin-right: 0}
@@ -123,16 +111,12 @@
 }
 /* Extra Small Devices, Phones */
 @media screen and (max-width: 580px) {
-  /* На 580 сделать hamburger */
   .hero__content, .hero__social{margin: 0;padding-top: 20px;}
   .hero__subtitle{text-align: center;}
   .hero__btn{display: flex;}
   .hero__social{margin: 0;align-items: center;}
   .hero__social ul{display: flex;}
   .hero__social li:not(:last-child){margin-right:18px;}
-/*  .navigation-top{order: 0;}
-  .logo{order: 1;}
-  .information{order: 2;}*/
   .benefit{padding-top: 0;}
   .masters__container{display: flex; align-items: center;}
   .masters__container:not(:last-child){margin-right: 0}
