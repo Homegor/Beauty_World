@@ -321,6 +321,9 @@
     flex-wrap: wrap;
     justify-content: space-between;
     display: none;
+    &__active{
+        display: flex;
+    }
     &__box{
         width: 444px;
         display: flex;
