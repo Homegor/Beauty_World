@@ -27,7 +27,7 @@ menuBtn.addEventListener('click', function(){
 
 // Tabs start
 function openTab(evt, tabName) {
-    var i, tabContent, tabLinks;
+    let i, tabContent, tabLinks;
     tabContent = document.getElementsByClassName("name");
     for (i = 0; i < tabContent.length; i++) {
         tabContent[i].style.display = "none";
