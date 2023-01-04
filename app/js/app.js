@@ -1,4 +1,4 @@
-// active button
+// active button Start
 function href_link() {
     alert("УПССССС!\n Эта функция пока не работает\n Однако, спасибо за запись");
 }
@@ -14,7 +14,7 @@ function phone_number(){
 function mail_too(){
     alert("Эта ссылка переносит вас на быструю отправку Email")
 }
-// active button end
+// active button End
 
 // Hamburger
 let menuBtn = document.querySelector('.menu-btn');
@@ -23,9 +23,9 @@ menuBtn.addEventListener('click', function(){
     menuBtn.classList.toggle('active');
     menu.classList.toggle('active');
 })
-// Hamburger end
+// Hamburger End
 
-// Tabs start
+// Tabs Start
 function openTab(evt, tabName) {
     let i, tabContent, tabLinks;
     tabContent = document.getElementsByClassName("name");
@@ -39,4 +39,8 @@ function openTab(evt, tabName) {
     document.getElementById(tabName).style.display = "flex";
     evt.currentTarget.className += " active";
 }
-// Tabs end
+// Tabs End
+
+// Slider Start
+
+// Slider End
