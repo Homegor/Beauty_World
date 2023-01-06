@@ -29,10 +29,8 @@
         color: darken($blue, 25%)
     }
 }
-.info-1:not(:last-child), .info-2:not(:last-child){
+.info:not(:last-child){
     margin-right: 30px;
-}
-.info-1{
     padding-bottom: 48px;
 }
 .btn{
@@ -244,7 +242,7 @@
     }
 }
 .services{
-    &__box-1, &__box-2{
+    &__box{
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;

@@ -6,7 +6,7 @@
   .hero__media{display: none;}
   .hero, .name{justify-content: space-around;}
   .masters__container{margin: 0 30px 10px 0}
-  .services__box-1, .services__box-2{flex-wrap: wrap; justify-content: center;}
+  .services__box{flex-wrap: wrap; justify-content: center;}
   .masters__info{justify-content: center;}
   .masters__subtitle{text-align: center;}
   .gallery__container{justify-content: center}
@@ -19,83 +19,39 @@
   .about__information{justify-content: center;}
   .video__blackout{margin-top: 15px;}
   .name{justify-content: center; margin-right: 0}
-  .gallery__slider{
-    display: none;
-  }
+  .gallery__slider{display: none;}
 }
 /* Hamburger menu */
 @media screen and (max-width: 880px) {
   .menu-btn {width: 30px;height: 30px;position: fixed;z-index:2;overflow: hidden;}
-  .menu-btn span {width: 30px;height: 2px;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);
-    background-color: #222222;
-    transition: all 0.5s;
-  }
-  .menu-btn span:nth-of-type(2) {
-    top: calc(50% - 5px);
-  }
-  .menu-btn span:nth-of-type(3) {
-    top: calc(50% + 5px);
-  }
-  .navigation{
-    margin-top: 0;
-  }
-  .navigation-top{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .navigation__active{
-    display: flex;
-    flex-direction: column;
-  }
-  .navigation li{
-    margin: 5px 0;
-  }
-
+  .menu-btn span {width: 30px;height: 2px;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);background-color: #222222;transition: all 0.5s;}
+  .menu-btn span:nth-of-type(2) {top: calc(50% - 5px);}
+  .menu-btn span:nth-of-type(3) {top: calc(50% + 5px);}
+  .navigation{margin-top: 0;}
+  .navigation-top{display: flex;align-items: center;justify-content: center;}
+  .navigation__active{display: flex;flex-direction: column;}
+  .navigation li{margin: 5px 0;}
   /* Меню, которое будет появляться */
-  .navigation-top {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 25%;
-    padding: 15px;
-    background: #f8f6f7;
-    transform: translateY(-100%);
-    transition: transform 0.5s;
-  }
-  .navigation-top.active {
-    transform: translateX(0);
-  }
-  .navigation-top li {
-    list-style-type: none;
-  }
-
+  .navigation-top {position: fixed;top: 0;left: 0;width: 100%;height: 25%;padding: 15px;background: #f8f6f7;transform: translateY(-100%);transition: transform 0.5s;}
+  .navigation-top.active {transform: translateX(0);}
+  .navigation-top li {list-style-type: none;}
   /* Меняем гамбургер иконку, когда меню открыто */
-  .menu-btn.active span:nth-of-type(1) {
-    display: none;
-  }
-  .menu-btn.active span:nth-of-type(2) {
-    top: 50%;
-    transform: translate(-50%, 0%) rotate(45deg);
-  }
-  .menu-btn.active span:nth-of-type(3) {
-    top: 50%;
-    transform: translate(-50%, 0%) rotate(-45deg);
-  }
+  .menu-btn.active span:nth-of-type(1) {display: none;}
+  .menu-btn.active span:nth-of-type(2) {top: 50%;transform: translate(-50%, 0%) rotate(45deg);}
+  .menu-btn.active span:nth-of-type(3) {top: 50%;transform: translate(-50%, 0%) rotate(-45deg);}
 }
 /* Small Devices, Tablets */
 @media screen and (max-width: 810px){
   .tabs__navigation{overflow: auto; white-space: nowrap;}
 }
 @media screen and (max-width: 770px) {
-  .benefit__icon:not(:last-child), .info-1:not(:last-child), .info-2:not(:last-child){margin-right: 0}
+  .benefit__icon:not(:last-child){margin-right: 0}
   .benefit__icon:not(:first-child){margin: 15px 0 0 0}
   .benefit{flex-direction: column; align-items: center}
   .contact__left-right{justify-content: center;}
   .contact__right{margin-top: 15px;}
-  .services__box-1,.services__box-2{align-items: center;justify-content: center; flex-direction: column;}
-  .info-2:not(:last-child){padding-bottom: 48px;}
+  .services__box{align-items: center;justify-content: center; flex-direction: column;}
+  .info:not(:last-child){padding-bottom: 48px; margin-right: 0;}
   .masters__info{flex-wrap: wrap; flex-direction: column; align-content: center;}
   .masters__name{text-align: center;}
   .reference{text-align: center;}
@@ -106,8 +62,6 @@
   .footer__information{margin-top: 8px; display: flex; flex-direction: row; align-items: center;}
   .footer__politic{margin-top: 0}
   .footer__title{margin-right: 10px}
-
-
 }
 /* Extra Small Devices, Phones */
 @media screen and (max-width: 580px) {
